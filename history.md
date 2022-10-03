@@ -98,7 +98,7 @@ gitHub 정책
   - 순서 로그인부터 나오게 하기
 - 개발환경 세팅 [~09.30]
 
-# 2022.09.37
+# 2022.09.27
 
 ## 이번주 완료
 
@@ -114,7 +114,7 @@ gitHub 정책
 > - `npm init vue@latest` 와 `vue create <projectName>` 의 차이점은 무엇인가??
 >   - 전자는 Vite 및 Rollup을 사용
 >   - 후자는 Vue CLI와 Webpack을 사용
->   - 현재 vue 개발자가 권장하는 것은 `.npm init vue@latest`
+>   - 현재 vue 개발자가 권장하는 것은 `npm init vue@latest`
 >   - [[출처](https://stackoverflow.com/questions/72189662/npm-init-vuelatest-vs-vue-create-projectname-to-generate-a-new-project)]
 > - `.eslintrc.json`, `.prettierrc.json`, `.eslintrc.cjs`의 역할이 대체 뭐임?
 >   - 없어도 잘 되던데?

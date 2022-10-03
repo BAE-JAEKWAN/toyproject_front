@@ -118,3 +118,4 @@ gitHub 정책
 >   - [[출처](https://stackoverflow.com/questions/72189662/npm-init-vuelatest-vs-vue-create-projectname-to-generate-a-new-project)]
 > - `.eslintrc.json`, `.prettierrc.json`, `.eslintrc.cjs`의 역할이 대체 뭐임?
 >   - 없어도 잘 되던데?
+> - 날짜를 비롯한 데이터 포맷팅은 `Intl`을 사용할건데 `day.js`가 굳이 필요한가?

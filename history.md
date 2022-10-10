@@ -119,3 +119,33 @@ gitHub 정책
 > - `.eslintrc.json`, `.prettierrc.json`, `.eslintrc.cjs`의 역할이 대체 뭐임?
 >   - 없어도 잘 되던데?
 > - 날짜를 비롯한 데이터 포맷팅은 `Intl`을 사용할건데 `day.js`가 굳이 필요한가?
+
+## 다음주 예정
+
+- [vue-router](https://im-designloper.tistory.com/19) 설정
+- 사용자 영역 레이아웃 구성 : `bootstrap` 기반
+
+# 2022.10.11
+
+## 이번주 완료
+
+- 공통 영역 세팅
+
+  - bootstrap 기반
+  - 헤더/컨텐츠 영역 분리
+
+- 에러 메세지 해결 시도
+
+  > 'xxx' 모듈 또는 해당 형식 선언을 찾을 수 없습니다.
+
+  - 파일 경로 : src\router\index.ts
+  - tsconfig.json에서 typeRoots를 설정
+  - vsCdoe에서 F1 눌러서 typescript 버전 4.xx 로 변경
+  - [[출처](https://velog.io/@hyunjoong/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AA%A8%EB%93%88-%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A0%EC%96%B8-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%B0%BE%EC%9D%84-%EC%88%98-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4)]
+  - 결과 : 미해결
+
+  > JavaScript | 'name' is declared but its value is never read.
+
+  - 파일 경로 : src\main.ts
+  - 뜻 : 'name'을 정의했는데 사용하지 않았다. 쓰지도 않을 변수를 왜 정의했냐는 뜻. 그런데 해결하려면 어떻게??
+  - [[출처](https://am05307.tistory.com/76)]

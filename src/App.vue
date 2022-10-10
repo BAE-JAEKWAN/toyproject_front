@@ -4,10 +4,10 @@ import layoutHeader from "./layout/header.vue";
 </script>
 
 <template>
-  <div class="wrapper">
-    <layoutHeader />
+  <layoutHeader />
 
-    <main>
+  <div class="wrapper">
+    <main id="main">
       <RouterView />
     </main>
   </div>

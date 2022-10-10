@@ -1,0 +1,22 @@
+#app {
+  background: linear-gradient(87deg, #2dce89, #2dcecc) !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    flex: 1;
+    margin: 80px auto 40px;
+    width: 100%;
+    padding: 0 80px;
+    #main {
+      height: 100%;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 6px;
+      //   max-width: 900px;
+      box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    }
+  }
+}

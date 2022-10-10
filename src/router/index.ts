@@ -11,8 +11,8 @@ const router = createRouter({
       component: () => import("../pages/boardList.vue"),
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/setTree",
+      name: "setTree",
       component: () => import("../pages/setTree.vue"),
     },
     {

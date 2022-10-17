@@ -5,12 +5,7 @@ import layoutHeader from "./layout/header.vue";
 
 <template>
   <layoutHeader />
-
-  <div class="wrapper">
-    <main id="main">
-      <RouterView />
-    </main>
-  </div>
+  <RouterView />
 </template>
 
 <style scoped></style>

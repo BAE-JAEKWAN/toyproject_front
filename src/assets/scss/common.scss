@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Black.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/src/assets/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf");
+  font-weight: 100;
+}
+
+.blind {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+.basic_table {
+  font-size: 14px;
+  thead {
+    // display: block;
+    // height: 0;
+    overflow: hidden;
+    background-color: #f6f9fc;
+    color: #8898aa;
+    th {
+      font-weight: 400;
+    }
+  }
+  td,
+  th {
+    vertical-align: middle;
+    padding: 12px 24px;
+    border-color: #e9ecef;
+  }
+  .table_title {
+    display: block;
+  }
+  .table_date {
+    font-weight: 100;
+    color: #606266;
+  }
+}

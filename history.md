@@ -149,3 +149,28 @@ gitHub 정책
   - 파일 경로 : src\main.ts
   - 뜻 : 'name'을 정의했는데 사용하지 않았다. 쓰지도 않을 변수를 왜 정의했냐는 뜻. 그런데 해결하려면 어떻게??
   - [[출처](https://am05307.tistory.com/76)]
+
+# 2022.10.18
+
+## 이번주 완료
+
+### 퍼블리싱
+
+- 게시물 목록
+
+## 다음주 목표
+
+### 퍼블리싱
+
+- 게시물 상세
+- composition API 컨버전
+- 타입스크립트 적용
+
+# 2022.11.01
+
+### MOCK 서버 구축해보기
+
+- https://antdevhistory.tistory.com/3
+- https://www.daleseo.com/mock-service-worker/
+
+### AWS 배포 알아보기

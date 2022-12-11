@@ -1,13 +1,13 @@
 <template>
-  <layout_type1 :titlegroup="titlegroup">
+  <layout_basic :titlegroup="state.titlegroup">
     <div class="boardList">
       <b-table
         id="boardList1"
         class="basic_table"
-        :items="items"
-        :fields="fields"
-        :per-page="perPage"
-        :current-page="currentPage"
+        :items="state.items"
+        :fields="state.fields"
+        :per-page="state.perPage"
+        :current-page="state.currentPage"
       >
         <template #cell(title)="data">
           <a :href="data.value.url || 'javascript:;'" class="table_title">{{
@@ -47,33 +47,37 @@
           <span class="table_date">{{ data.value }}</span>
         </template>
       </b-table>
-      <b-pagination
-        v-model="currentPage"
-        :total-rows="rows"
-        :per-page="perPage"
-        aria-controls="boardList1"
-        align="end"
-      ></b-pagination>
+      <!-- <div class="bottomGroup d-flex justify-content-end">
+        <b-pagination
+          v-model="state.bottomGroup.currentPage"
+          :total-rows="state.bottomGroup.rows"
+          :per-page="state.bottomGroup.perPage"
+          aria-controls="boardList1"
+          align="end"
+        ></b-pagination>
+      </div> -->
+      <bottomGroup :bottomGroup="state.bottomGroup" />
     </div>
-  </layout_type1>
+  </layout_basic>
 </template>
 
-<script>
-import layout_type1 from "../layout/layout_type1.vue";
+<script lang="ts">
+import { computed, ref, onMounted, reactive } from "vue";
+import layout_basic from "../layout/layout_basic.vue";
+import bottomGroup from "../components/bottomGroup.vue";
 
 export default {
   name: "boardList",
   components: {
-    layout_type1,
+    layout_basic,
+    bottomGroup,
   },
-  data() {
-    return {
+  setup() {
+    const state: any = reactive({
       titlegroup: {
         title: "회의록",
         text: "이 템플릿을 사용해 모든 회의록을 한곳에 모아두세요. 회의 유형별로 회의록을 태그해 쉽게 찾을 수 있습니다. 회의 일시 및 참석자 등 유용한 정보도 쉽게 확인해 보세요.",
       },
-      perPage: 5,
-      currentPage: 1,
       fields: [
         {
           key: "title",
@@ -100,7 +104,7 @@ export default {
         {
           title: {
             text: "주간회의",
-            url: null,
+            url: "/boardRead",
           },
           importance: "LOW",
           assigns: [
@@ -359,12 +363,21 @@ export default {
           date: "2022년 9월 23일 오후 09:00",
         },
       ],
+      bottomGroup: {
+        pagination: {
+          perPage: 5,
+          currentPage: 1,
+          rows: computed(() => state.items.length),
+        },
+        subGroup: {
+          write: true,
+        },
+      },
+    });
+    // onMounted(() => console.log(state.value.items.length));
+    return {
+      state,
     };
-  },
-  computed: {
-    rows() {
-      return this.items.length;
-    },
   },
 };
 </script>
@@ -461,7 +474,10 @@ export default {
     }
   }
 }
-.pagination {
-  margin: 16px;
+.bottomGroup {
+  padding: 16px;
+  .subGroup {
+    margin-left: 10px;
+  }
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
-  <layout_type1 :titlegroup="titlegroup">
+  <layout_basic :titlegroup="titlegroup">
     <h2>로그인</h2>
-  </layout_type1>
+  </layout_basic>
 </template>
 
 <script>
-import layout_type1 from "../layout/layout_type1.vue";
+import layout_basic from "../layout/layout_basic.vue";
 
 export default {
   components: {
-    layout_type1,
+    layout_basic,
   },
   data() {
     return {

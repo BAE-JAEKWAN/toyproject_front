@@ -11,6 +11,16 @@ const router = createRouter({
       component: () => import("../pages/boardList.vue"),
     },
     {
+      path: "/boardRead",
+      name: "boardRead",
+      component: () => import("../pages/boardRead.vue"),
+    },
+    {
+      path: "/boardWrite",
+      name: "boardWrite",
+      component: () => import("../pages/boardWrite.vue"),
+    },
+    {
       path: "/setTree",
       name: "setTree",
       component: () => import("../pages/setTree.vue"),

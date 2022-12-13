@@ -4,9 +4,33 @@
     "es6": true,
     "node": true
   },
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:vue/essential",
+    "airbnb-base",
+    "@vue/eslint-config-typescript",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "vue/no-multiple-template-root": [],
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        "ignores": ["Login"]
+      }
+    ],
+    "semi": 0,
+    "import/no-unresolved": "off",
+    "comma-dangle": "off",
+    "no-new": 0,
+    "indent": "off",
+    "import/extensions": "off"
   },
   "parserOptions": {
     "parser": "@typescript-eslint/parser" //"parser": "babel-eslint"

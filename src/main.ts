@@ -13,6 +13,13 @@ import "./assets/scss/reset.scss";
 import "./assets/scss/common.scss";
 import "./assets/scss/layout.scss";
 
+import { worker } from "./mocks/worker";
+if (process.env.NODE_ENV === "development") {
+  worker.start({
+    onUnhandledRequest: "bypass",
+  });
+}
+
 const app = createApp(App);
 
 app.use(createPinia());

@@ -174,3 +174,9 @@ gitHub 정책
 - https://www.daleseo.com/mock-service-worker/
 
 ### AWS 배포 알아보기
+
+# 2022.12.13
+
+- routes 설정 자동화 : vite-plugin-pages
+- setup 문법 변경
+- MOCK 서버 설정 및 연동

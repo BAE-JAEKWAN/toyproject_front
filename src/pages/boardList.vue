@@ -1,5 +1,5 @@
 <template>
-  <layout_basic :titlegroup="state.titlegroup">
+  <layout_basic :titlegroup="boardList.data.titlegroup">
     <div class="boardList">
       <b-table
         id="boardList1"
@@ -68,15 +68,11 @@ import bottomGroup from "../components/bottomGroup.vue";
 import { getList } from "../services/fetchers.js";
 
 const state: any = reactive({
-  titlegroup: {
-    title: "회의록",
-    text: "이 템플릿을 사용해 모든 회의록을 한곳에 모아두세요. 회의 유형별로 회의록을 태그해 쉽게 찾을 수 있습니다. 회의 일시 및 참석자 등 유용한 정보도 쉽게 확인해 보세요.",
-  },
   bottomGroup: {
     pagination: {
       perPage: 5,
       currentPage: 1,
-      rows: computed(() => boardList.totalPages),
+      rows: computed(() => boardList.data.items.length),
     },
     subGroup: {
       write: true,
@@ -84,10 +80,10 @@ const state: any = reactive({
   },
 });
 onMounted(() => {});
-const boardList = reactive({ data: undefined, totalPages: undefined });
+const boardList = reactive({ data: undefined });
 const fetch = async () => {
   boardList.data = await getList();
-  boardList.totalPages = await boardList.data.items.length;
+  console.log("총 게시물 갯수 :", boardList.data.items.length);
 };
 fetch();
 
